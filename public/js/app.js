@@ -1,3 +1,4 @@
+//Global Variables:
 const key = require('./keys');
 const spoonKey = key.main;
 const searchBox = document.querySelector('#search input');
@@ -11,6 +12,7 @@ let recipeArray = [];
 
 let sUrl = `https://api.spoonacular.com/recipes/search?apiKey=${spoonKey}&query=${search}&number=${num}&diet=${diet}&cuisine=${cuisine}`;
 
+//Get recipes api call:
 let spoonRecipe = function() {
     fetch(sUrl) 
     .then(response => {
@@ -59,6 +61,7 @@ let spoonRecipe = function() {
     });
 };
 
+//Create DOM elements for recipe display:
 let newRecipe = function(title, ids, time, servings, url) {
     let $body = $("#main");
     let $recArea = $("<div></div>").addClass("recipeArea");
@@ -86,6 +89,7 @@ let newRecipe = function(title, ids, time, servings, url) {
     }    
 };
 
+//Search functionality
 document.addEventListener('keypress', (e) => {
     search = searchBox.value;
     if (e.key === 'Enter') {
@@ -113,6 +117,7 @@ submit.addEventListener('click', (e) => {
         spoonRecipe();
 });
 
+//Dropbar preference functionality:
 $('#diet').on('change', function() {
     if ($(this).val() == 1) {
         diet = "";
@@ -130,7 +135,7 @@ $('#diet').on('change', function() {
     
   });
 
-  $('#cuisine').on('change', function() {
+$('#cuisine').on('change', function() {
     if ($(this).val() == 1) {
         cuisine = "";
         sUrl = `https://api.spoonacular.com/recipes/search?apiKey=${spoonKey}&query=${search}&number=${num}&diet=${diet}&cuisine=${cuisine}`;
@@ -200,8 +205,9 @@ $('#diet').on('change', function() {
         sUrl = `https://api.spoonacular.com/recipes/search?apiKey=${spoonKey}&query=${search}&number=${num}&diet=${diet}&cuisine=${cuisine}`;
         console.log(sUrl);
     };
-  });
+});
 
+//Reset page on logo click:
 $(".logo").click((e) => {
     location.reload();
 });
