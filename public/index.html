@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+    <title>Foodelio a recipe</title>
+</head>
+<body>
+    <header>
+        <section class="container">
+            <div class="navbar">
+                <form id="search">
+                    <label for="searching"></label>
+                    <input type="text" id="search"  onfocus="this.value=''" placeholder="Search for a recipe">
+                    <button id="submit">Submit</button>
+                </form>
+              <h1 class = "logo">Foodelio</h1>
+              <div class="select">
+                  <select id="cuisine">
+                      <option selected disabled>Cuisine</option>
+                      <option value="1">All</option>
+                      <option value="2">African</option>
+                      <option value="3">American</option>
+                      <option value="4">British</option>
+                      <option value="5">Cajun</option>
+                      <option value="6">Chinese</option>
+                      <option value="7">European</option>
+                      <option value="8">Greek</option>
+                      <option value="9">Indian</option>
+                      <option value="10">Italian</option>
+                      <option value="11">Japanese</option>
+                      <option value="12">Jewish</option>
+                      <option value="13">Mediterranean</option>
+                      <option value="14">Mexican</option>
+                      <option value="15">Middle Eastern</option>
+                      <option value="16">Thai</option>
+                      <option value="17">Vietnamese</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <select id="diet">
+                        <option selected disabled value="0">Dietary Restrictions</option>
+                        <option value="1">None</option>
+                        <option value="2">Vegan</option>
+                        <option value="3">Vegetarian</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </header>   
+    <br>
+    <br>
+    <section id="main">
+        <img src="images/background.png" id="background">
+        <!-- <a href="">
+            <div id="recipeArea">
+                <h2 class="title">title</h2>
+                <img src="" id="recImg">
+                <img src="images/timer2.png" id="timer">
+                <h4 class="time">25 minutes to make</h4>
+                <h4 class="serving">Makes about 4 servings</h4>
+            </div>
+        </a> -->
+    </section>
+    <!-- <script src="./config/keys.js"></script> -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bundle.js"></script>
+</body>
+</html>

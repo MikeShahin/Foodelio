@@ -1,0 +1,188 @@
+body {
+  background-color: rgb(188, 172, 190);
+}
+
+.img {
+  text-align: center;
+}
+
+h1 {
+  float: left;
+  display:block;
+  background-color: #2c3e50;
+  font-size:1.8vw;
+  padding: 3px;
+  line-height: 50px;
+  text-decoration:none;
+  transition: 0.2s all;
+  margin-top: 0px;
+  color: white;
+  mix-blend-mode: multiply;
+}
+
+div#recipe {
+  width:300px;
+  border:1px solid grey;
+  text-align:center;
+  height:320px;
+  vertical-align:middle;
+  padding:20px;
+  float: left;
+  background-color: rgb(109, 207, 150);
+  display: inline-block;
+  flex-wrap: wrap
+}
+
+a:link {
+  color: rgb(8, 118, 133);
+}
+
+/* visited link */
+a:visited {
+  color: #2c3e50;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ac3183;
+}
+
+/* selected link */
+a:active {
+  color: #2c3e50;
+}
+
+h4.time p {
+  display: inline;
+}
+
+.recipeArea {
+  justify-content: center;
+}
+
+header {
+  background-color: rgb(8, 118, 133);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+div#recipe img#recImg{
+  height: 150px;
+  width: 240px;
+}
+
+.title {
+  padding: 0px 10px;
+  margin-top: 1px;
+}
+
+/* search bar */
+#search {
+  float: right;
+  height: 7px;
+  padding: 10px 100px 14px 10px;
+  margin-top: -1px;
+  margin-right: -30px
+}
+
+#search #submit {
+  /* padding: 10px 10px 10px 10px; */
+  background-color: #2c3e50;
+  color:rgb(8, 118, 133);
+  height: 33px;
+  float: right;
+  border-color: rgba(43, 92, 226, 0);
+  margin-top: 0px;
+}
+
+#search #submit:hover {
+  background-color: #f39c12;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(8, 118, 133);
+  font-family: Arial;
+  height: 50px;
+}
+
+/* Dropdown Select */
+select {
+outline: 0;
+box-shadow: none;
+border: 0 !important;
+background: #2c3e50;
+background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+display: none;
+}
+
+/* Custom Select */
+.select {
+position: relative;
+display: flex;
+width: 15vw;
+height: 2em;
+line-height: 2;
+padding: 0px 10px 0px 10px;
+margin: 0.45%;
+margin-top: 9.5px;
+background: #2c3e50;
+overflow: hidden;
+border-radius: .25em;
+float: right;
+}
+
+select {
+flex: 1;
+padding: 0 .5em;
+color: #fff;
+cursor: pointer;
+}
+
+/* Arrow */
+.select::after {
+content: '\25BC';
+position: absolute;
+top: 0;
+right: 0;
+padding: 0 1em;
+background: #34495e;
+cursor: pointer;
+pointer-events: none;
+-webkit-transition: .25s all ease;
+-o-transition: .25s all ease;
+transition: .25s all ease;
+}
+
+/* Transition */
+.select:hover::after {
+color: #f39c12;
+}
+
+#recipe {
+  transition: 0.5s all;
+}
+
+#recipe:hover {
+  padding: 1 1%;
+  background-color: rgb(149, 172, 184);
+}
+
+#main {
+  margin-left: 7vw;
+}
+
+#background {
+  display: block;
+  margin-left: 20%;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 50%;
+}
